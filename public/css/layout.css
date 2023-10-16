@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Montserrat:ital,wght@0,400;0,600;1,400&family=Roboto+Condensed:ital@1&display=swap');
+
+:root {
+    --bgcolor: #F1DEC9;
+    --header_color: #C8B6A6;
+    --sidenav: #A4907C;
+    --sidenav_item: #B5A392;
+    --icon: black;
+}
+
+* {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body {
+    background-color: var(--bgcolor);
+    font-family: "Poppins", sans-serif;
+
+}
+
+
+/* -------------- Header -------------- */
+header {
+    background-color: var(--header_color);
+    /* position: relative; */
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    /* text-align: right; */
+    /* width: 100%; */
+    /* height: 5%; */
+}
+
+.header-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-icon {
+    /* background-color: var(--icon); */
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.profile-name {
+    margin-right: 10px;
+}
+
+h4 {
+    margin-right: 10px;
+}
+
+/* .profile-icon {
+   width: 30px;
+} */
+
+/* .profile-icon {
+    block-size: 2.5em;
+    display: inline-block;
+    fill: white;
+    inline-size: 3em;
+    vertical-align: middle;
+} */
+
+
+/* -------------- Sidenav -------------- */
+.sidenav {
+    background-color: var(--sidenav);
+    position: fixed; /* Change from absolute to fixed */
+    top: 0;
+    left: 0;
+    width: 210px;
+    height: 100%;
+    z-index: 1; /* Ensure the sidebar is above other content */
+    overflow-y: auto; /* Add scroll for the sidebar if it exceeds the viewport height */
+}
+
+
+/* -------------- Logo -------------- */
+.img {
+    /* background-color: yellow; */
+    text-align: center;
+    margin-top: 10px;
+}
+img {
+    width: 140px;
+}
+.img img {
+    /* display: block; */
+    margin: 0 auto;
+}
+
+
+/* -------------- Sidenav_List -------------- */
+/* .row { */
+    /* background-color: lightblue; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* height: 100vh; */
+/* } */
+
+.item {
+    background-color: var(--sidenav_item);
+    margin-top: 10px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+  
+  .item:hover .name {
+    color: var(--sidenav);
+  }
+
+  .item:hover {
+    background-color: var(--bgcolor);
+}
+
+.item:hover .icon {
+    fill: var(--sidenav);
+}
+
+a {
+    text-decoration: none;
+    /* font-weight: bold; */
+    font-size: 20px;
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 210px;
+    background-color: #f1f1f1;
+  }
+
+  li a {
+    display: block;
+    color: #000;
+    /* padding: 20px; */
+    text-decoration: none;
+    /* background-color: red; */
+  }
+
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+/* .item a:hover {
+    background-color: var(--bgcolor);
+    color: var(--sidenav)
+} */
+
+
+
+/* -------------- Icon Design -------------- */
+/* :root {
+    --baseColor: #606468;
+    --iconFill: var(--baseColor);
+} */
+.icons {
+    display: none;
+}
+.icon {
+    block-size: 1.5em;
+    display: inline-block;
+    fill: white;
+    inline-size: 3em;
+    vertical-align: middle;
+}
+.icon_item {
+    position: absolute;
+    width: 20px;
+}
+
+
+
+
+
+
+/* Style for the dropdown container */
+.dropdown {
+    position: relative;
+    /* display: inline-block; */
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: sticky;
+    background-color: var(--sidenav_item);
+    min-width: 210px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Style for the dropdown links */
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color on hover */
+.dropdown-content a:hover {
+    background-color: var(--bgcolor);
+    color: var(--sidenav);
+}
+
+.name-1 {
+    font-size: 16px;
+}
+
+
+
+/* Style for the logout dropdown */
+.logout-dropdown {
+    display: none;
+    /* position: absolute; */
+    background-color: white;
+    width: 150px;
+    /* min-width: 120px; */
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right: 0;
+    /* top: 40px; */
+    text-align: center;
+    padding: 10px 0;
+}
+
+.logout-dropdown a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.logout-dropdown a:hover {
+    background-color: #ddd;
+}
+
+.content {
+    position: relative;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    width: calc(100% - 210px); /* Adjust the width to account for the sidebar */
+    height: 100%;
+    /* background-color: lightblue; */
+    margin-left: 210px; /* Add margin on the left to make space for the sidebar */
+}
+
+
+
+/* ---------- ---------- CUSTOMER ---------- ---------- */
+.customer {
+    margin: 40px;
+    padding: 20px;
+    background-color: yellowgreen;
+}
+
+table, th, td {
+    border:1px solid black;
+  }
